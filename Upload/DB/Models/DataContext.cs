@@ -10,6 +10,7 @@ namespace Upload.DB.Models
     {
         public DataContext()
         {
+
         }
 
         public DataContext(DbContextOptions<DataContext> options)
