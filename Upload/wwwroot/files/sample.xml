@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Transactions>
+  <Transaction>
+    <Transactionid>Inv00003</Transactionid>
+    <TransactionDate>2019-01-23T13:45:10</TransactionDate>
+    <Price>35.99</Price>
+<PaymentDetails>
+<Amount>200.00</Amount>
+<CurrencyCode>USD</CurrencyCode>
+</PaymentDetails>
+<Status>Done</Status>
+  </Transaction>
+  <Transaction>
+    <Transactionid>Inv00002</Transactionid>
+    <TransactionDate>2019-01-23T13:45:10</TransactionDate>
+    <Price>35.99</Price>
+<PaymentDetails>
+<Amount>200.00</Amount>
+<CurrencyCode>MMK</CurrencyCode>
+</PaymentDetails>
+<Status>Done</Status>
+  </Transaction>
+</Transactions>

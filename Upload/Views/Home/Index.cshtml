@@ -1,0 +1,75 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using System.Data;
+@model List<DataViewModel>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <form asp-controller="Home" asp-action="Index" method="post" enctype="multipart/form-data">
+        <input type="file" accept=".csv,.xml" name="files" id="infile" />
+        <input type="submit" value="Import" />
+        <p>Only Accept CSV And Xml ! </p>
+    </form>
+    @if (Model != null)
+    {
+        <hr />
+        <table>
+            <tr>
+                <th>
+                    Transaction Identificator
+                </th>
+                <th>
+                    Amount
+                </th>
+                <th>
+                    Currency Code
+                </th>
+                <th>
+                    Transaction Date
+                </th>
+                <th>
+                    Status
+                </th>
+            </tr>
+            @foreach (var a in Model)
+            {
+        <tr>
+            <td>
+                @a.TransactionIdentificator
+            </td>
+            <td>
+                @a.Amount
+            </td>
+            <td>
+                @a.CurrencyCode
+            </td>
+            <td>
+                @a.TransactionDate
+            </td>
+            <td>
+                @a.Status
+            </td>
+        </tr>
+            }
+
+
+        </table>
+        
+    }
+</body>
+</html>
+<script>
+    var uploadField = document.getElementById("infile");
+    uploadField.onchange = function () {
+    if(this.files[0].size > 1000000){
+       alert("File is too big!,Max size is 1MB");
+       this.value = "";
+    };
+};
+</script>
