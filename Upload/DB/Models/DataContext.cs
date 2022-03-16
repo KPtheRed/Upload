@@ -16,6 +16,7 @@ namespace Upload.DB.Models
         public DataContext(DbContextOptions<DataContext> options)
             : base(options)
         {
+
         }
 
         public virtual DbSet<DataModel> DataModel { get; set; }
